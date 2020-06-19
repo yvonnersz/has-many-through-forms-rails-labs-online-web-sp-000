@@ -1,1 +1,7 @@
 
+<h1><%= @user.username %></h1>
+
+<% @user.comments.each do |comment| %>
+<%= link_to comment.post.title, post_path(comment.post) %>
+<!-- Feeling Groovy with href "/posts/1" -->
+<% end %>
